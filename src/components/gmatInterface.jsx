@@ -104,32 +104,37 @@ const GMATInterface = () => {
   return (
     <div className="min-h-screen bg-gray-50 relative">
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="flex bg-transparent">
+        <div className="flex justify-center mb-6 sm:mb-8 lg:mb-12">
+          <div className="flex flex-col sm:flex-row bg-transparent w-full sm:w-auto">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-6 py-3 rounded-md font-medium text-2xl transition-all duration-100 ${
+                className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-md font-medium text-sm sm:text-lg lg:text-2xl transition-all duration-100 text-center mb-2 sm:mb-0 ${
                   activeTab === index
-                    ? `${getTabColorClasses(index)} bg-transparent border-b-2`
-                    : 'text-gray-600 hover:text-gray-800'
+                    ? `${getTabColorClasses(index)} bg-transparent border-b-2 sm:border-b-2 border-l-4 sm:border-l-0`
+                    : 'text-gray-600 hover:text-gray-800 border-l-4 border-transparent sm:border-l-0'
                 }`}
               >
-                {tab.title} <span className={getHighlightColor(index)}>{tab.highlight}</span> {tab.subtitle}
+                <span className="block sm:inline">
+                  {tab.title} <span className={getHighlightColor(index)}>{tab.highlight}</span>
+                </span>
+                <span className="block sm:inline sm:ml-1">
+                  {tab.subtitle}
+                </span>
               </button>
             ))}
           </div>
         </div>
 
         {/* Content Section */}
-        <div className={`${content[activeTab].bgColor} rounded-2xl overflow-hidden`}>
-          <div className="grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-12">
+        <div className={`${content[activeTab].bgColor} rounded-xl lg:rounded-2xl overflow-hidden`}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start lg:items-center p-4 sm:p-6 lg:p-8 xl:p-12">
             {/* Left Column - Text Content */}
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900">
+            <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight">
                 {content[activeTab].title.split(' ').map((word, index) => (
                   <span key={index} className={word === 'Quant' || word === 'Verbal' || word === 'Data' || word === 'Insights' ? getHighlightColor(activeTab) : ''}>
                     {word}{' '}
@@ -137,15 +142,15 @@ const GMATInterface = () => {
                 ))}
               </h2>
               
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
                 {content[activeTab].subtitle}
               </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {content[activeTab].features.map((feature, index) => (
                   <li key={index} className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 leading-relaxed">
+                    <span className="text-sm sm:text-base text-gray-700 leading-relaxed">
                       <strong>{feature.split(' ')[0]} {feature.split(' ')[1]}</strong>
                       {' ' + feature.split(' ').slice(2).join(' ')}
                     </span>
@@ -155,23 +160,23 @@ const GMATInterface = () => {
             </div>
 
             {/* Right Column - Mock Interface */}
-            <div className="relative">
-              <div className="bg-white rounded-xl shadow-lg border overflow-hidden">
+            <div className="relative order-1 lg:order-2">
+              <div className="bg-white rounded-lg sm:rounded-xl shadow-lg border overflow-hidden">
                 {/* Header */}
-                <div className="bg-gray-800 text-white p-4">
+                <div className="bg-gray-800 text-white p-3 sm:p-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold">GMAT Prep Platform</h3>
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <h3 className="font-semibold text-sm sm:text-base">GMAT Prep Platform</h3>
+                    <div className="flex space-x-1 sm:space-x-2">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
                     </div>
                   </div>
                 </div>
 
                 {/* Content Area */}
-                <div className="p-6 h-80 bg-gray-50">
-                  <div className="bg-white rounded-lg p-4 shadow-sm h-full flex flex-col">
+                <div className="p-3 sm:p-4 lg:p-6 h-48 sm:h-64 lg:h-80 bg-gray-50">
+                  <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm h-full flex flex-col">
                     <div className="flex-1 overflow-hidden">
                       <img 
                         src={tabs[activeTab].image} 
@@ -179,11 +184,11 @@ const GMATInterface = () => {
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <div className="mt-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">
+                    <div className="mt-3 sm:mt-4">
+                      <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
                         {content[activeTab].title}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
                         {content[activeTab].subtitle}
                       </p>
                     </div>
@@ -195,18 +200,22 @@ const GMATInterface = () => {
         </div>
       </div>
 
-      {/* Chat Interface */}
-      
+      {/* Chat Interface - Hidden in this responsive version but structure maintained */}
+      {showChat && (
+        <div className="fixed bottom-4 right-4 w-80 sm:w-96 bg-white rounded-lg shadow-xl border z-50 hidden">
+          {/* Chat content would go here */}
+        </div>
+      )}
 
-      {/* Chat Toggle Button (when chat is hidden) */}
-      {/* {!showChat && (
+      {/* Chat Toggle Button */}
+      {!showChat && (
         <button
           onClick={() => setShowChat(true)}
-          className="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center justify-center z-50"
+          className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center justify-center z-50"
         >
-          <MessageCircle size={24} />
+          <MessageCircle size={20} className="sm:w-6 sm:h-6" />
         </button>
-      )} */}
+      )}
     </div>
   );
 };
