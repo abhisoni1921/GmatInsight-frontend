@@ -18,7 +18,7 @@ const CourseCard = ({ course }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg border-2 border-dashed border-gray-300 p-6 hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-lg border-2 border-dashed border-gray-300 p-6 hover:shadow-xl transition-shadow duration-300">
       {/* Course Image */}
       <div className="relative mb-4">
         <img 
@@ -41,7 +41,7 @@ const CourseCard = ({ course }) => {
       </div>
 
       {/* Course Title */}
-      <h3 className="text-xl font-bold text-gray-800 mb-4">{course.title}</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mb-4">{course.title}</h3>
 
       {/* Course Stats */}
       <div className="flex items-center gap-6 mb-4 text-sm text-gray-600">
@@ -127,7 +127,7 @@ const CoursesSection = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 mb-20">
+    <div className="max-w-7xl mx-auto px-4 py-8 mb-20 ">
       {/* Header */}
       <div className="mb-8">
         

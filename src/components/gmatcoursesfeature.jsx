@@ -40,8 +40,8 @@ export default function GMATCourseFeatures() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-4xl font-semibold text-gray-800 mb-4">
-            Why GMAT INSIGHT is the GMAT course
+          <h1 className="text-4xl md:text-4xl font-semibold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent mb-4">
+            Why GMAT INSIGHT is the GMAT Course
           </h1>
           <h2 className="text-4xl md:text-4xl font-semibold text-blue-600 mb-8">
             for you
@@ -54,7 +54,7 @@ export default function GMATCourseFeatures() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="styles_item__EcdjI benefit bg-gray-300 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex"
+              className="styles_item__EcdjI benefit bg-transparent rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex"
             >
               <div className="styles_icon__Fi4p4 mr-6 flex-shrink-0">
                 {feature.icon}
