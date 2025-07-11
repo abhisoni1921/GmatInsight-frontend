@@ -73,29 +73,29 @@ const Footer = () => {
           </div>
 
           {/* Follow Us Section */}
-              <div>
-      <h3 className="text-lg font-semibold mb-4 text-white">FOLLOW US</h3>
-      <div className="grid grid-cols-3 gap-1-2">
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Facebook size={20} className="text-white" />
-        </a>
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Linkedin size={20} className="text-white" />
-        </a>
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Twitter size={20} className="text-white" />
-        </a>
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Youtube size={20} className="text-white" />
-        </a>
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Instagram size={20} className="text-white" />
-        </a>
-        <a href="#" className="bg-blue-900 hover:bg-blue-800 rounded-full p-3 flex items-center justify-center transition-colors w-12 h-12">
-          <Music size={20} className="text-white" />
-        </a>
-      </div>
-    </div>
+             <div className="space-y-4">
+  <h3 className="text-lg font-medium text-gray-100 tracking-wider uppercase">Connect With Us</h3>
+  <div className="grid grid-cols-3 gap-3">
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Facebook size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Linkedin size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Twitter size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Youtube size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Instagram size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+    <a href="#" className="bg-gray-800 hover:bg-gray-700 rounded-full p-3 flex items-center justify-center transition-all duration-200 w-12 h-12 group">
+      <Music size={20} className="text-gray-100 group-hover:text-white" />
+    </a>
+  </div>
+</div>
         </div>
 
         {/* Bottom Section */}

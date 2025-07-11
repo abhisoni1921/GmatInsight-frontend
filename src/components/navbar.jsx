@@ -1,33 +1,42 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        setIsScrolled(scrollTop > 50);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  
-      const navigate = useNavigate();
+  const location = useLocation(); // ⬅️ Get current route
+  const navigate = useNavigate();
+
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    if (!isHome) {
+      setIsScrolled(true); // always solid on non-home pages
+      return;
+    }
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    handleScroll(); // set initial scroll state
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname, isHome]); // rerun on route change
+
 
       const handleLoginClick = () =>{
         navigate('/login');
       }
   
     const navItems = [
-      { name: 'Pricing', href: '#pricing' },
+      { name: 'About', href: '/about' },
       { name: 'Reviews', href: '#reviews' },
-      { name: 'Guarantee', href: '#guarantee', hasDropdown: true },
+      { name: 'Courses', href: '#guarantee', hasDropdown: true },
       { name: 'Live Classes', href: '#live-classes' },
       { name: 'OnDemand', href: '#ondemand' },
       { name: 'MBA Admissions', href: '#mba-admissions' },
@@ -66,11 +75,11 @@ const Navbar = () => {
                     {item.hasDropdown && (
                       <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
                         <div className="py-1">
-                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                            Score Guarantee
+                          <a href="/gmat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            GMAT
                           </a>
-                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                            Money Back Guarantee
+                          <a href="/gre" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            GRE
                           </a>
                         </div>
                       </div>
