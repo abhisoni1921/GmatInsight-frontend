@@ -39,7 +39,7 @@ const Navbar = () => {
     { name: 'Live Classes', href: '#live-classes' },
     { name: 'OnDemand', href: '#ondemand' },
     { name: 'MBA Admissions', href: '#mba-admissions' },
-    { name: 'Tutoring', href: '#tutoring' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   

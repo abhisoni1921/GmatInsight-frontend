@@ -63,7 +63,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden mt-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-purple-100/20"></div>
