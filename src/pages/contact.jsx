@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, User, MessageCircle } from 'lucide-react';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,8 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <Navbar/>
       {/* Hero Section with Background Image */}
       <div className="relative h-96 bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 overflow-hidden">
         {/* Background Pattern/Texture */}
@@ -39,7 +42,7 @@ const ContactUs = () => {
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tight">
+            <h1 className="text-6xl md:text-7xl font-semibold text-white mb-6 tracking-tight">
               Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">us</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto">
@@ -50,11 +53,11 @@ const ContactUs = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-16 -mt-20 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 py-16 relative z-20">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Side - Contact Info */}
-          <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-8 shadow-2xl border border-gray-100">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Talk</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -95,7 +98,7 @@ const ContactUs = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+          <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl p-8 shadow-2xl border border-gray-100">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Looking for a solution?</h2>
               <p className="text-gray-600 text-lg">
@@ -198,25 +201,8 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Bottom CTA Section */}
-      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 py-16">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to get started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies that trust us with their digital transformation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-gray-900 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors">
-              Schedule a Demo
-            </button>
-            <button className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white hover:text-gray-900 transition-colors">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </div>
+      
+      <Footer/>
     </div>
   );
 };
