@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { useNavigate,useLocation } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const location = useLocation(); // ⬅️ Get current route
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const isHome = location.pathname === '/';
+  // Check if current route is home, about, or contact
+  const isTransparentRoute = ['/', '/about', '/contact','/testimonials'].includes(location.pathname);
 
   useEffect(() => {
-    if (!isHome) {
-      setIsScrolled(true); // always solid on non-home pages
+    if (!isTransparentRoute) {
+      setIsScrolled(true); // always solid on other pages
       return;
     }
 
@@ -26,22 +26,22 @@ const Navbar = () => {
     handleScroll(); // set initial scroll state
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname, isHome]); // rerun on route change
+  }, [location.pathname, isTransparentRoute]);
 
+  const handleLoginClick = () => {
+    navigate('/login');
+  }
 
-      const handleLoginClick = () =>{
-        navigate('/login');
-      }
-  
-    const navItems = [
-      { name: 'About', href: '/about' },
-      { name: 'Reviews', href: '#reviews' },
-      { name: 'Courses', href: '#guarantee', hasDropdown: true },
-      { name: 'Live Classes', href: '#live-classes' },
-      { name: 'OnDemand', href: '#ondemand' },
-      { name: 'MBA Admissions', href: '#mba-admissions' },
-      { name: 'Tutoring', href: '#tutoring' },
-    ];
+  const navItems = [
+    { name: 'About', href: '/about' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Courses', href: '#guarantee', hasDropdown: true },
+    { name: 'Live Classes', href: '#live-classes' },
+    { name: 'OnDemand', href: '#ondemand' },
+    { name: 'MBA Admissions', href: '#mba-admissions' },
+    { name: 'Tutoring', href: '#tutoring' },
+  ];
+
   
     return (
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -51,11 +51,12 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <img 
+              <a href="/"><img 
                 src="logo2.png" 
                 alt="GMAT INSIGHT" 
                 className="h-8 w-auto"
               />
+              </a>
             </div>
   
             {/* Desktop Navigation */}

@@ -129,7 +129,7 @@ export default function LoginPage() {
       {/* Footer */}
       <div className="relative z-10 text-center pb-8">
         <p className="text-gray-400 text-sm">
-          © 2024 TestPrep. All rights reserved.
+          © 2025 Gmatinsight. All rights reserved.
         </p>
       </div>
     </div>

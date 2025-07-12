@@ -5,6 +5,8 @@ import GmatCoursesSection from './pages/gmat.jsx';
 
 
 import AboutPage from './pages/about.jsx';
+import ContactUs from './pages/contact.jsx';
+import TestimonialsPage from './pages/testimonials.jsx';
 function App() {
   
 
@@ -16,6 +18,8 @@ function App() {
       <Route path='/login' element={<LoginPage/>}/>
       <Route path='/gmat' element={<GmatCoursesSection/>}/>
       <Route path='/about' element={<AboutPage/>}/>
+      <Route path='/contact' element={<ContactUs/>}/>
+      <Route path='/testimonials' element={<TestimonialsPage/>}/>
     </Routes>
     </BrowserRouter>
 
