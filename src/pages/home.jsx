@@ -8,8 +8,9 @@ import Footer from '../components/footer';
 import CoursesSection from '../components/courses';
 import Stats from '../components/stats';
 import FoundersComponent from '../components/founders';
-import GMATTestimonialsBanner from '../components/testimonials';
+// import GMATTestimonialsBanner from '../components/testimonials';
 import WhatWeOffer from '../components/whatweoffer';
+import TestimonialCarousel from '../components/testcarousel';
 
 
 
@@ -31,7 +32,7 @@ const Home = () => {
     
 
       {/* Testimonials */}
-      <GMATTestimonialsBanner/>
+      <TestimonialCarousel/>
 
       {/* Features Section */}
       <GMATCourseFeatures/>
