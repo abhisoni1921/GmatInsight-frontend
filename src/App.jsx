@@ -7,6 +7,7 @@ import GmatCoursesSection from './pages/gmat.jsx';
 import AboutPage from './pages/about.jsx';
 import ContactUs from './pages/contact.jsx';
 import TestimonialsPage from './pages/testimonials.jsx';
+import GreCoursesSection from './pages/gre.jsx';
 function App() {
   
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<LoginPage/>}/>
       <Route path='/gmat' element={<GmatCoursesSection/>}/>
+      <Route path='/gre' element={<GreCoursesSection/>}/>
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/contact' element={<ContactUs/>}/>
       <Route path='/testimonials' element={<TestimonialsPage/>}/>

@@ -3,61 +3,75 @@ import { ArrowRight, BookOpen, Target, Users, Sparkles, Zap, Star } from 'lucide
 
 const WhatWeOffer = () => {
   const services = [
-    {
-      id: 1,
-      icon: <BookOpen className="w-7 h-7" />,
-      title: "Comprehensive GMAT Prep",
-      description: "Complete GMAT preparation with expert-designed curriculum covering all sections - Quantitative, Verbal, Analytical Writing, and Integrated Reasoning.",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      points: [
-        "All 4 GMAT sections covered",
-        "2000+ practice questions",
-        "Adaptive learning technology",
-        "Real exam simulations"
-      ],
-      gradient: "from-blue-500 via-blue-600 to-blue-700",
-      bgGradient: "from-blue-50 to-blue-100",
-      iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
-      buttonColor: "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
-    },
-    {
-      id: 2,
-      icon: <Target className="w-7 h-7" />,
-      title: "Personalized Strategy",
-      description: "Tailored study plans and strategies based on your strengths, weaknesses, and target score to maximize your GMAT performance efficiently.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      points: [
-        "Customized study schedules",
-        "Weakness identification",
-        "Score improvement tracking",
-        "Strategic test-taking tips"
-      ],
-      gradient: "from-purple-500 via-purple-600 to-purple-700",
-      bgGradient: "from-purple-50 to-purple-100",
-      iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
-      buttonColor: "bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"
-    },
-    {
-      id: 3,
-      icon: <Users className="w-7 h-7" />,
-      title: "Expert Mentoring",
-      description: "One-on-one guidance from GMAT experts and successful MBA graduates who understand your journey and provide personalized support.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      points: [
-        "1-on-1 mentoring sessions",
-        "MBA admissions guidance",
-        "Mock interview practice",
-        "24/7 doubt resolution"
-      ],
-      gradient: "from-teal-500 via-teal-600 to-teal-700",
-      bgGradient: "from-teal-50 to-teal-100",
-      iconBg: "bg-gradient-to-br from-teal-500 to-teal-600",
-      buttonColor: "bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
-    }
-  ];
+  {
+    id: 1,
+    icon: <BookOpen className="w-7 h-7" />,
+    title: "AI-Empowered Smart Learning OnDemand/Video Course",
+    description:
+      "A fully updated, expert-designed curriculum tailored for the new GMAT Focus Edition, covering all three sections: Quantitative Reasoning, Verbal Reasoning, and Data Insights (Special Emphasis).",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    points: [
+      "Detailed Concept Videos on all GMAT Focus sections",
+      "100% Video solutions for all Data Insights and Quant questions",
+      "2000+ high-quality practice questions",
+      "Smart, adaptive learning paths",
+      "Practice questions with real exam simulations replicating exact GMAT TEST like Interface"
+    ],
+    gradient: "from-blue-500 via-blue-600 to-blue-700",
+    bgGradient: "from-blue-50 to-blue-100",
+    iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
+    buttonColor:
+      "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+  },
+  {
+    id: 2,
+    icon: <Target className="w-7 h-7" />,
+    title: "100% Adaptive 15+ FULL LENGTH TESTS with Detailed Analysis",
+    description:
+      "Get exam-ready with over 15 full-length, fully adaptive tests designed to mirror the actual GMAT Focus Edition experience — from interface to scoring.Gain real confidence and test-day readiness with every practice session.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    points: [
+      "Exact GMAT Focus test-like interface",
+      "Smart adaptive testing — just like the real exam",
+      "Detailed performance analysis after each test",
+      "Section-wise breakdown to identify strengths & gaps",
+      "(Refund Guarantee) if not satisfied*"
+    ],
+    gradient: "from-purple-500 via-purple-600 to-purple-700",
+    bgGradient: "from-purple-50 to-purple-100",
+    iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
+    buttonColor:
+      "bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"
+  },
+  {
+    id: 3,
+    icon: <Users className="w-7 h-7" />,
+    title: "Personalised 1-on-1 Online Private Tutoring & Group Classes in Delhi",
+    description:
+      "Achieve your highest potential with personalized coaching through expert-led 1-on-1 online tutoring or small-group classes in Delhi — tailored to your unique strengths and goals.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    points: [
+      "Live 1-on-1 private tutoring (online)",
+      "Small, focused group classes in Delhi",
+      "Customized study plans and mentorship",
+      "Expert faculty with proven GMAT Focus success",
+      "Free access to our complete On-Demand GMAT Focus Course",
+      "Regular progress tracking and feedback"
+    ],
+    gradient: "from-teal-500 via-teal-600 to-teal-700",
+    bgGradient: "from-teal-50 to-teal-100",
+    iconBg: "bg-gradient-to-br from-teal-500 to-teal-600",
+    buttonColor:
+      "bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700"
+  }
+];
+
 
   return (
-    <section className="py-24 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
+    <section className="py-4 min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -70,14 +84,15 @@ const WhatWeOffer = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 rounded-full mb-6">
             <Sparkles className="w-5 h-5 text-purple-600" />
-            <span className="text-sm font-semibold text-purple-700">GMAT Prep Services</span>
+            <span className="text-sm font-semibold text-purple-700">Our Curated Services</span>
           </div>
-          <h2 className="text-5xl font-semibold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent mb-6">
-            Your Path to GMAT Success
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-5xl font-semibold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight pb-2">
+  Try 1– FREE Full length Diagnostic Test
+</h2>
+
+          {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive GMAT preparation designed to help you achieve your target score and get into your dream business school
-          </p>
+          </p> */}
         </div>
 
         {/* Services Grid */}

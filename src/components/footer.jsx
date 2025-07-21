@@ -17,13 +17,11 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/GMAT-logo/GMAT-logo@2x.webp" 
+                src="logo2.png" 
                 alt="GMAT INSIGHT" 
-                className="h-8"
+                className="h-10"
               />
-              <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-semibold">
-                GRE
-              </span>
+              
             </div>
             <p className="text-sm text-gray-300">
               Prepare with the best. Rock the test.™

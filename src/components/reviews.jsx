@@ -14,62 +14,34 @@ const Reviews = () => {
   );
 
   const recognitions = [
-    {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/morningstar@2x.webp",
-      alt: "Morningstar",
-      title: "2024 Best GMAT Course",
-      description: "on Morningstar",
-      stars: 5
-    },
+  
     {
       logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/gmat_club@2x.webp",
       alt: "GMAT Club",
-      title: "#1 Rated Test Prep Course",
+      title: "Legendary expert on GMATCLUB with 15k+ Kudos",
       description: "On GMAT Club",
       stars: 5,
       score: "700+ Reviews"
     },
-    {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/mba_insight@2x.webp",
-      alt: "MBA Insight",
-      title: "#1 Rated Test Prep Course",
-      description: "2019 - 2024 on MBA Insight",
-      stars: 5
-    },
-    {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/beat_gmat@2x.webp",
-      alt: "BEAT GMAT",
-      title: "5-Star rating",
-      description: "On Beat The GMAT",
-      stars: 5,
-      score: "450+ Reviews"
-    },
-    {
+     {
       logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/poets_quants@2x.webp",
       alt: "Poets & Quants",
-      title: "#1 Ranked platform",
-      description: "For adequately addressing a user's individual needs",
-      stars: 5
-    },
-    {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/poets_quants@2x.webp",
-      alt: "Poets & Quants",
-      title: "#1 Ranked platform",
+      title: "5-Star rated admission and GMAT support services",
       description: "For making difficult concepts clear",
       stars: 5
     },
     {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/poets_quants@2x.webp",
-      alt: "Poets & Quants",
-      title: "#1 Ranked platform",
-      description: "For showing deep GMAT expertise",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png",
+      alt: "Google Reviews",
+      title: "Dwarka New Delhi: Top-rated GMAT Prep services with 20 years of experience",
+      description: "2019 - 2024 on MBA Insight",
       stars: 5
     },
     {
-      logo: "https://d6mmsse0kchai.cloudfront.net/standalone/20250702/images/recognitions/poets_quants@2x.webp",
-      alt: "Poets & Quants",
-      title: "#1 Ranked platform",
-      description: "Most likely to be recommended to a friend or colleague",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png",
+      alt: "Google Reviews",
+      title: "Malviya Nagar, New Delhi: Top-rated GMAT Prep services with 20 years of experience",
+      description: "2019 - 2024 on MBA Insight",
       stars: 5
     }
   ];
