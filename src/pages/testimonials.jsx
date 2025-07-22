@@ -139,6 +139,7 @@ const testimonials = [
           </div>
 
           {/* Testimonial Cards */}
+
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
   {testimonials.map((testimonial, index) => (
     <div key={index} className="relative">
@@ -179,20 +180,23 @@ const testimonials = [
               <p className="text-gray-700 leading-relaxed pl-6 overflow-hidden">
                 {testimonial.content}
               </p>
+              
+              
             </div>
           </div>
         </div>
       </div>
     </div>
   ))}
-</div>
+       </div>
 
           {/* View All Button */}
           <div className="text-center">
-            <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <a href="/user1"><button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
               View all
               <ArrowRight className="w-5 h-5" />
             </button>
+            </a>
           </div>
         </div>
       </main>
