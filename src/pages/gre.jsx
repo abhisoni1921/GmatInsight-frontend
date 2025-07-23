@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Clock, BookOpen, Users, Star, Award, Target, TrendingUp, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import TestimonialPage from '../components/oneTestimonial';
+
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -352,7 +352,7 @@ const GreCoursesSection = () => {
           ))}
         </div>
       </div>
-      <TestimonialPage/>
+      
 
       <Footer/>
     </>

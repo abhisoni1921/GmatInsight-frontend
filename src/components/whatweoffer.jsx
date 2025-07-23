@@ -19,7 +19,7 @@ const WhatWeOffer = () => {
       "Practice questions with real exam simulations replicating exact GMAT TEST like Interface"
     ],
     gradient: "from-blue-500 via-blue-600 to-blue-700",
-    bgGradient: "from-blue-50 to-blue-100",
+    bgGradient: "from-blue-100 to-blue-200",
     iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
     buttonColor:
       "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
