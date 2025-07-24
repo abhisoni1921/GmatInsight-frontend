@@ -7,6 +7,73 @@ import Footer from '../components/footer';
 
 
 
+
+import { FileText, List,  HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const  ExamHeader = () => {
+  const sections = [
+    { title: 'Test Format', icon: FileText },
+    { title: 'Sections', icon: List },
+    { title: 'Syllabus', icon: BookOpen },
+    { title: 'Sample Questions', icon: HelpCircle }
+  ];
+
+   const themeClasses = 'bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900';
+  const sectionClasses = 'hover:bg-blue-100/60 border-blue-200/40';
+
+  return (
+    
+    <header className={`${themeClasses} shadow-lg transition-all duration-300 mt-12`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4">
+          {/* Title */}
+          <div className="flex items-center space-x-3">
+            <BookOpen className="w-8 h-8 text-blue-700" />
+            <Link to="/knowgmat"><h1 className="text-2xl font-bold tracking-tight">
+              Know the <span className="text-blue-600">Exam</span>
+            </h1></Link>
+          </div>
+
+          {/* Navigation Sections */}
+          <div className="hidden md:flex items-center space-x-1">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <div
+                  key={section.title}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border ${sectionClasses} transition-all duration-200 cursor-pointer group`}
+                >
+                  <Icon className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+                  <span className="text-sm font-medium">{section.title}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Mobile Sections */}
+        <div className="md:hidden pb-4">
+          <div className="grid grid-cols-2 gap-2">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <div
+                  key={section.title}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg border ${sectionClasses} transition-all duration-200 cursor-pointer group`}
+                >
+                  <Icon className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+                  <span className="text-sm font-medium">{section.title}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
@@ -65,6 +132,7 @@ const HeroSection = () => {
   return (
     <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden mt-8">
       {/* Background Pattern */}
+      <ExamHeader/>
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-purple-100/20"></div>
         <div className="absolute top-0 left-0 w-full h-full opacity-30" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>

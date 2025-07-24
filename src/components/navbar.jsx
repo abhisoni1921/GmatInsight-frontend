@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   // Check if current route is home, about, or contact
-  const isTransparentRoute = ['/', '/about', '/contact', '/testimonials'].includes(location.pathname);
+  const isTransparentRoute = ['/', '/about', '/contact', '/testimonials','/knowgmat'].includes(location.pathname);
 
   useEffect(() => {
     if (!isTransparentRoute) {
@@ -52,13 +52,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/">
+            <Link to="/">
               <img 
                 src="logo2.png" 
                 alt="GMAT INSIGHT" 
                 className="h-8 md:h-10 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -66,24 +66,24 @@ const Navbar = () => {
             <div className="flex items-center space-x-4 lg:space-x-8">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="text-white hover:text-blue-300 px-2 lg:px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
                   >
                     {item.name}
                     {item.hasDropdown && (
                       <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                     )}
-                  </a>
+                  </Link>
                   {item.hasDropdown && (
                     <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
                       <div className="py-1">
-                        <a href="/gmat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        <Link to="/gmat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                           GMAT
-                        </a>
-                        <a href="/gre" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        </Link>
+                        <Link to="/gre" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                           GRE
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -140,31 +140,31 @@ const Navbar = () => {
                   </button>
                   {isDropdownOpen && (
                     <div className="pl-4">
-                      <a 
-                        href="/gmat" 
+                      <Link 
+                        to="/gmat" 
                         className="block px-3 py-2 text-base text-gray-200 hover:text-blue-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         GMAT
-                      </a>
-                      <a 
-                        href="/gre" 
+                      </Link>
+                      <Link 
+                        to="/gre" 
                         className="block px-3 py-2 text-base text-gray-200 hover:text-blue-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         GRE
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
               ) : (
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-white hover:text-blue-300 block px-3 py-2 text-base font-medium transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               )}
             </div>
           ))}

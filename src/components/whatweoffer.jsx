@@ -6,7 +6,13 @@ const WhatWeOffer = () => {
   {
     id: 1,
     icon: <BookOpen className="w-7 h-7" />,
-    title: "AI-Empowered Smart Learning OnDemand/Video Course",
+    title: (
+      <div className="leading-tight">
+        AI-Empowered <br/>
+        Smart Learning <br/>
+        OnDemand Course<br/>
+      </div>
+    ),
     description:
       "A fully updated, expert-designed curriculum tailored for the new GMAT Focus Edition, covering all three sections: Quantitative Reasoning, Verbal Reasoning, and Data Insights (Special Emphasis).",
     image:
@@ -27,7 +33,14 @@ const WhatWeOffer = () => {
   {
     id: 2,
     icon: <Target className="w-7 h-7" />,
-    title: "100% Adaptive 15+ FULL LENGTH TESTS with Detailed Analysis",
+      title: (
+      <div className="leading-tight">
+        100% Adaptive <br/>
+        15+ FULL LENGTH TESTS <br/>
+        with Detailed Analysis<br/>
+      </div>
+    ),
+    
     description:
       "Get exam-ready with over 15 full-length, fully adaptive tests designed to mirror the actual GMAT Focus Edition experience — from interface to scoring.Gain real confidence and test-day readiness with every practice session.",
     image:
@@ -48,7 +61,14 @@ const WhatWeOffer = () => {
   {
     id: 3,
     icon: <Users className="w-7 h-7" />,
-    title: "Personalised 1-on-1 Online Private Tutoring & Group Classes in Delhi",
+    title: (
+      <div className="leading-tight">
+        Personalised 1-on-1 <br/>
+        Online Private Tutoring <br/>
+        & Group Classes in Delhi<br/>
+      </div>
+    ),
+    
     description:
       "Achieve your highest potential with personalized coaching through expert-led 1-on-1 online tutoring or small-group classes in Delhi — tailored to your unique strengths and goals.",
     image:
